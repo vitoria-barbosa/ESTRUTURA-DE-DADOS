@@ -2,17 +2,16 @@
 #include <string.h>
 #include <iostream>
 using namespace std;
-
 class No{
 	public: 
 		int mat;
-		char nome[23];
+		string nome;
 		No *prox;
 		
 		// construtor
-		No(int m, const char* n){
-			mat=m;
-			strcpy(nome,n);
+		No(int m, string n){
+			mat = m;
+			nome = n;
 			prox=NULL;
 		}
 };
@@ -27,7 +26,7 @@ class Lista{
 		}
 
 		// métodos
-		void addFinal(int m, const char* n){
+		void addFinal(int m, string n){
 			No *novo = new No(m, n);
 			if (inicio == NULL) inicio = fim = novo;
 			else{
@@ -36,7 +35,7 @@ class Lista{
 			}
 		}
 		
-		void addInicio(int m, const char* n){
+		void addInicio(int m, string n){
 			No *novo = new No(m, n);
 			if (inicio == NULL) inicio = fim = novo;
 			else{
@@ -46,7 +45,7 @@ class Lista{
 		}
 	
 
-		void addOrdenado(int m, const char* n){
+		void addOrdenado(int m, string n){
 			No *anterior;
 			No *atual = inicio; 
 			No *novo = new No(m, n);
@@ -70,8 +69,8 @@ class Lista{
 		No *atual = inicio;
 		while (atual != NULL){
 			cout << "-------------------" <<endl;
-			cout << "|Mat:"<< atual->mat <<endl;
-			cout << "|Nome:"<< atual->nome <<endl;
+			cout << "|Mat: "<< atual->mat <<endl;
+			cout << "|Nome: "<< atual->nome <<endl;
 			atual=atual->prox;
 			}
    		}
