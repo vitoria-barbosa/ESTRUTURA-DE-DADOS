@@ -101,7 +101,7 @@ class Lista{
 
 };
 
-main(){
+int main(){
 	
 	Lista *turma = new Lista();
 	cout << "\nTurma 1: " << endl;
@@ -129,8 +129,10 @@ main(){
 	turma3->addOrdenado( 20, "joana");
 	turma3->addOrdenado(100, "kamila");
 	turma3->mostrar();
-	cout << "\nRemover aluna Joana\n" <<endl;
+	
+	cout << "\nRemover aluna Joana\n" << endl;
 	turma3->remover(20);
 	turma3->mostrar();
 	
+	return 0;
 }
