@@ -24,18 +24,7 @@ class Lista{
 			fim=NULL;
 		}
 
-		void add_fim(int mat, string nome){
-			No *novo = new No(mat, nome);
-			if (inicio == NULL){
-				inicio = novo;
-				fim = novo;
-			}
-			else {
-				fim->prox = novo;
-				fim = novo;
-			}
-		};
-
+        // Questão 1
 		void add_inicio(int mat, string nome){
             No *novo = new No(mat, nome);
             if (inicio == NULL){
@@ -141,6 +130,7 @@ int main(){
 	turma->add_inicio(20, "Maria Caroline");
 	turma->add_inicio(12, "Itallo");
 	turma->add_inicio(37, "Mariana");
+    
     cout << "Turma:" << endl;
 	turma->listar();
 	
