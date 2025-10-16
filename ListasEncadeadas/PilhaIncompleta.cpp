@@ -48,7 +48,7 @@ class Pilha{
 
 				return removido;
 			}
-			cout << "Fila vazia!" << endl;
+			cout << "Pilha vazia!" << endl;
 			abort();
 		}
 
